@@ -1,7 +1,12 @@
 import React from "react";
+import HeroSectionComponent from "../components/HeroSectionComponent";
 
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <div>
+      <HeroSectionComponent />
+    </div>
+  );
 };
 
 export default HomePage;
