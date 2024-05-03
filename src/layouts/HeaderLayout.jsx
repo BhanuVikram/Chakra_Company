@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logos/chakra-company-logo-white.svg";
 
 import {
   Box,
@@ -61,11 +62,13 @@ const HeaderLayout = () => {
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <Box cursor={"pointer"}>Logo</Box>
-          <HStack spacing={8} alignItems={"center"}>
+          <Box cursor={"pointer"}>
+            <img src={logo} alt="Chakra Company logo" width={"140px"} />
+          </Box>
+          <HStack spacing={4} alignItems={"center"}>
             <HStack
               as={"nav"}
-              spacing={4}
+              spacing={{ base: 4, lg: 20 }}
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link, index) => (
