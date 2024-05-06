@@ -160,7 +160,12 @@ const ContactFormComponent = () => {
                       <InputLeftElement>
                         <BsPerson />
                       </InputLeftElement>
-                      <Input type="text" name="name" placeholder="Your Name" />
+                      <Input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        autoComplete="off"
+                      />
                     </InputGroup>
                   </FormControl>
 
@@ -175,6 +180,7 @@ const ContactFormComponent = () => {
                         type="email"
                         name="email"
                         placeholder="Your Email"
+                        autoComplete="off"
                       />
                     </InputGroup>
                   </FormControl>
@@ -185,6 +191,7 @@ const ContactFormComponent = () => {
                     <Textarea
                       name="message"
                       placeholder="Your Message"
+                      autoComplete="off"
                       rows={6}
                       resize="none"
                     />
