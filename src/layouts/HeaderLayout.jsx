@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logos/chakra-company-logo-white.svg";
+import logoLight from "../assets/logos/chakra-company-logo-white.svg";
+import logoDark from "../assets/logos/chakra-company-logo-black.svg";
+
 import { BsSun, BsMoonStarsFill } from "react-icons/bs";
 
 import {
@@ -72,12 +74,21 @@ const HeaderLayout = () => {
             width={{ base: "100%", md: "auto" }}
             margin={{ base: "auto", md: "0" }}
           >
-            <Image
-              src={logo}
-              alt="Chakra Company logo"
-              width={"140px"}
-              margin={{ base: "auto", md: "4" }}
-            />
+            {colorMode === "light" ? (
+              <Image
+                src={logoDark}
+                alt="Chakra Company logo"
+                width={"140px"}
+                margin={{ base: "auto", md: "4" }}
+              />
+            ) : (
+              <Image
+                src={logoLight}
+                alt="Chakra Company logo"
+                width={"140px"}
+                margin={{ base: "auto", md: "4" }}
+              />
+            )}
           </Box>
           <HStack spacing={4} alignItems={"center"}>
             <HStack

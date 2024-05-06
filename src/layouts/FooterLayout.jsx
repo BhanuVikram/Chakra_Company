@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logos/chakra-company-logo-color.svg";
+import logoLight from "../assets/logos/chakra-company-logo-white.svg";
+import logoDark from "../assets/logos/chakra-company-logo-black.svg";
 
 import {
   Box,
   chakra,
   Container,
+  Image,
   Stack,
   Text,
+  useColorMode,
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
@@ -46,6 +49,8 @@ const SocialButton = ({ children, label, href }) => {
 };
 
 const FooterLayout = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Box
       bg={useColorModeValue("gray.50", "gray.900")}
@@ -62,7 +67,8 @@ const FooterLayout = () => {
         <Stack
           direction={{ base: "column", md: "row" }}
           spacing={{ base: 4, md: 12 }}
-          my={{ base: 8, md: 12 }}
+          mt={{ base: 8, md: 12 }}
+          mb={{ base: 8, md: 4 }}
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
@@ -72,7 +78,21 @@ const FooterLayout = () => {
             </Link>
           ))}
         </Stack>
-        <img src={logo} alt="Chakra Company logo" width={"180px"} />
+        {colorMode === "light" ? (
+          <Image
+            src={logoDark}
+            alt="Chakra Company logo"
+            width={"140px"}
+            margin={{ base: "auto", md: "4" }}
+          />
+        ) : (
+          <Image
+            src={logoLight}
+            alt="Chakra Company logo"
+            width={"140px"}
+            margin={{ base: "auto", md: "4" }}
+          />
+        )}
       </Container>
 
       <Box
