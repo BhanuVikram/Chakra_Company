@@ -1,21 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logos/chakra-company-logo-white.svg";
+import { BsSun, BsMoonStarsFill } from "react-icons/bs";
 
 import {
+  Avatar,
   Box,
   Flex,
-  Avatar,
   HStack,
   Text,
-  IconButton,
   Button,
+  IconButton,
+  Image,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
   MenuDivider,
   useDisclosure,
+  useColorMode,
   useColorModeValue,
   Stack,
 } from "@chakra-ui/react";
@@ -50,6 +53,7 @@ const NavLink = (props) => {
 
 const HeaderLayout = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <>
@@ -62,13 +66,23 @@ const HeaderLayout = () => {
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <Box cursor={"pointer"}>
-            <img src={logo} alt="Chakra Company logo" width={"140px"} />
+          <Box
+            cursor={"pointer"}
+            m={4}
+            width={{ base: "100%", md: "auto" }}
+            margin={{ base: "auto", md: "0" }}
+          >
+            <Image
+              src={logo}
+              alt="Chakra Company logo"
+              width={"140px"}
+              margin={{ base: "auto", md: "4" }}
+            />
           </Box>
           <HStack spacing={4} alignItems={"center"}>
             <HStack
               as={"nav"}
-              spacing={{ base: 4, lg: 20 }}
+              spacing={{ base: 4, lg: 10, xl: 20 }}
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link, index) => (
@@ -79,9 +93,20 @@ const HeaderLayout = () => {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-            <Link to={"/contact"}>
-              <NavLink>Contact Us</NavLink>
-            </Link>
+            <Box display={{ base: "none", lg: "block" }}>
+              <Link to={"/contact"}>
+                <NavLink>Contact Us</NavLink>
+              </Link>
+            </Box>
+            <Button
+              aria-label="Toggle Color Mode"
+              onClick={toggleColorMode}
+              _focus={{ boxShadow: "none" }}
+              w="fit-content"
+              m={{ base: 0, md: 5 }}
+            >
+              {colorMode === "light" ? <BsMoonStarsFill /> : <BsSun />}
+            </Button>
           </Flex>
         </Flex>
 
