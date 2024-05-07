@@ -84,19 +84,23 @@ const HeaderLayout = () => {
             margin={{ base: "auto", md: "0" }}
           >
             {colorMode === "light" ? (
-              <Image
-                src={logoDark}
-                alt="Chakra Company logo"
-                width={"140px"}
-                margin={{ base: "auto", md: "4" }}
-              />
+              <Link to={"/"}>
+                <Image
+                  src={logoDark}
+                  alt="Chakra Company logo"
+                  width={"140px"}
+                  margin={{ base: "auto", md: "4" }}
+                />
+              </Link>
             ) : (
-              <Image
-                src={logoLight}
-                alt="Chakra Company logo"
-                width={"140px"}
-                margin={{ base: "auto", md: "4" }}
-              />
+              <Link to={"/"}>
+                <Image
+                  src={logoLight}
+                  alt="Chakra Company logo"
+                  width={"140px"}
+                  margin={{ base: "auto", md: "4" }}
+                />
+              </Link>
             )}
           </Box>
           <HStack spacing={4} alignItems={"center"}>

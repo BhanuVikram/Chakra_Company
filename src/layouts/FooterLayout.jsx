@@ -79,19 +79,25 @@ const FooterLayout = () => {
           ))}
         </Stack>
         {colorMode === "light" ? (
-          <Image
-            src={logoDark}
-            alt="Chakra Company logo"
-            width={"140px"}
-            margin={{ base: "auto", md: "4" }}
-          />
+          <Link to={"/"}>
+            <Image
+              cursor={"pointer"}
+              src={logoDark}
+              alt="Chakra Company logo"
+              width={"140px"}
+              margin={{ base: "auto", md: "4" }}
+            />{" "}
+          </Link>
         ) : (
-          <Image
-            src={logoLight}
-            alt="Chakra Company logo"
-            width={"140px"}
-            margin={{ base: "auto", md: "4" }}
-          />
+          <Link to={"/"}>
+            <Image
+              cursor={"pointer"}
+              src={logoLight}
+              alt="Chakra Company logo"
+              width={"140px"}
+              margin={{ base: "auto", md: "4" }}
+            />
+          </Link>
         )}
       </Container>
 
