@@ -2,6 +2,7 @@ import React from "react";
 import HeroSectionComponent from "../components/HeroSectionComponent";
 import TestimonialsSectionComponent from "../components/TestimonialsSectionComponent";
 import ServicesSectionComponent from "../components/ServicesSectionComponent";
+import PricingChartSectionComponent from "../components/PricingChartSectionComponent";
 
 const HomePage = () => {
   return (
@@ -9,7 +10,7 @@ const HomePage = () => {
       <HeroSectionComponent />
       <TestimonialsSectionComponent />
       <ServicesSectionComponent />
-
+      <PricingChartSectionComponent />
     </div>
   );
 };
