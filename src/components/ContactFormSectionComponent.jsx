@@ -57,7 +57,9 @@ const ContactFormComponent = () => {
       <Box
         borderRadius="lg"
         m={{ base: 5, md: 16, lg: 10 }}
-        p={{ base: 5, lg: 16 }}
+        px={{ base: 5, lg: 16 }}
+        pt={{ base: 5, lg: 16 }}
+        pb={{ base: 20, md: 28 }}
       >
         <Box>
           <VStack spacing={{ base: 4, md: 8, lg: 20 }}>

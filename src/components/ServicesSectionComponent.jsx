@@ -35,7 +35,7 @@ const Feature = ({ text, icon, iconBg }) => {
 
 const ServicesSectionComponent = () => {
   return (
-    <Container maxW={"5xl"} py={32}>
+    <Container maxW={"5xl"} py={{ base: 20, md: 36 }}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
           <Text

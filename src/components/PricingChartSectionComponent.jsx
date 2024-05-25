@@ -35,7 +35,10 @@ function PriceWrapper(props) {
 
 const PricingChartSectionComponent = () => {
   return (
-    <Box pt={24} pb={20} bg={useColorModeValue("gray.100", "gray.700")}>
+    <Box
+      py={{ base: 20, md: 36 }}
+      bg={useColorModeValue("gray.100", "gray.700")}
+    >
       <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize="4xl">
           Plans that fit your need

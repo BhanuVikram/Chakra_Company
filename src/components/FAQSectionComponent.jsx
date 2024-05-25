@@ -53,7 +53,7 @@ const FAQs = [
 
 const FAQSectionComponent = () => {
   return (
-    <Box m={20}>
+    <Box py={{ base: 20, md: 36 }}>
       <VStack spacing={2} textAlign="center" mb={12}>
         <Heading a s="h2" fontSize="2xl">
           Frequently Asked Questions
