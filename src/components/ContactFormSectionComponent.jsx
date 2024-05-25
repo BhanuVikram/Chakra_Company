@@ -34,7 +34,11 @@ const ContactFormComponent = () => {
 
     fetch(scriptUrl, { method: "POST", body: new FormData(formRef.current) })
       .then((res) => {
-        alert("Message sent successfully!");
+        if (res.ok) {
+          alert("Message sent successfully!");
+        } else {
+          alert("Message not sent. Please try again!");
+        }
       })
       .catch((err) => console.log(err));
   };
