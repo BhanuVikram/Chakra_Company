@@ -138,7 +138,7 @@ const HeaderLayout = () => {
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {Links.map((link, index) => (
-                <Link key={index} to={link.route}>
+                <Link key={index} to={link.route} onClick={onClose}>
                   <NavLink>{link.page}</NavLink>
                 </Link>
               ))}
