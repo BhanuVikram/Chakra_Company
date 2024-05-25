@@ -1,6 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 const Lost500Page = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return <div>Lost500Page</div>;
 };
 
