@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import CarouselSectionComponent from "../components/CarouselSectionComponent";
+import WebsiteFeaturesSectionComponent from "../components/WebsiteFeaturesSectionComponent";
 
 const WebDevPage = () => {
   useEffect(() => {
@@ -9,6 +10,7 @@ const WebDevPage = () => {
   return (
     <div>
       <CarouselSectionComponent />
+      <WebsiteFeaturesSectionComponent />
     </div>
   );
 };
